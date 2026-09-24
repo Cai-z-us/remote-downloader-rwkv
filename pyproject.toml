@@ -1,0 +1,26 @@
+[project]
+name = "hf-remote-downloader"
+version = "0.3.0"
+description = "Resumable, verified, self-healing Hugging Face repository downloader"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.28"]
+keywords = ["huggingface", "download", "resume", "proxy"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+socks = ["requests[socks]>=2.28"]
+
+[project.scripts]
+hf-download-repo = "hf_downloader.repo:main"
+hf-download-progress = "hf_downloader.progress:main"
+[tool.setuptools.packages.find]
+include = ["hf_downloader*"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

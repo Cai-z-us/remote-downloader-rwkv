@@ -1,0 +1,20 @@
+# Local environments and build artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Runtime state and partially downloaded files
+.hf-download-state*.json
+.hf-catalog.*.json
+.hf-locks/
+*.uploading
+*.corrupt
+
+# Private configuration
+.env
+.env.*
