@@ -18,3 +18,4 @@ dist/
 # Private configuration
 .env
 .env.*
+start_rwkv_download.sh
